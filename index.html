@@ -10,11 +10,19 @@
 </head>
 
 <body>
+    <div class=length>
+        <h1>How long would you like your password to be?</h1>
+        <input id="inputLength"> <br> <br>
+        <button onclick="getLength()"> Submit </button>
+        <h2 id="message"> </h2>
+    </div>
 
-    <h1>How long would you like your password to be?</h1>
-    <input id="inputLength"> <br> <br>
-    <button onclick="getLength()"> Submit </button>
-    <h2 id="message"> </h2>
+    <div class="upperCase">
+        <h1>How many UpperCase letters would you like your password to have?</h1>
+        <input id="inputUpperCaseNumber"> <br> <br>
+        <button onclick="getUpperCaseNumber()">Submit </button>
+        <h2 id="messageUpperCase"></h2>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
