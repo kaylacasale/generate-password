@@ -1,16 +1,49 @@
+
+
+var errorEl = document.querySelector('.errorMessage')
+var numberInputEl = document.querySelector('.length');
+var numberLength;
+
+
 document.querySelector('.enterLength').addEventListener('click', function () {
-    const numberLength = Number(document.querySelector('.length').value);
+    numberLength = Number(numberInputEl.value);
     console.log(numberLength);
 
     if (!numberLength) {
-        document.querySelector('.between').textContext = 'Not a NUMBER';
+        errorEl.innerHTML = "";
+        console.log("You made it!");
+        errorEl.innerHTML = "Not a number";
+
     } else if (
         (numberLength < 8) || (numberLength > 128)) {
-        document.querySelector('.between').textContent = 'Your number needs to be within 8 to 128';
+        errorEl.innerHTML = ""
+        errorEl.innerHTML = 'ERROR: Your number needs to be within the range 8 - 128';
     } else {
-        document.querySelector('.password').innerHTML = numberLength + ' characters';
+        errorEl.innerHTML = "";
+        //create div and p tag and update p tag to be password generated length
+        var passDivEl = document.createElement("div");
+        var passOlLength = document.createElement("ol");
+        var passLiLength = document.createElement("li");
+        passDivEl.textContent = "Password Length";
+        passDivEl.appendChild(passOlLength);
+        passOlLength.appendChild(passLiLength);
+        passLiLength.textContent = numberLength + " characters long";
+
+        //document.querySelector('.password').innerHTML = numberLength + ' characters long';
     }
 });
+//errorEl. //to access global variable after input in function
+
+//console.log(numberLengthValue.numberLength.value);
+//this.numberLength.value = var fullLength;
+//numberLengthValue(numberLength);
+
+//numberLengthValue.numberLength();
+//lengthEmpty.unshift(numberLengthValue.numberLength.value);
+//console.log(lengthFull);
+
+//numberLengthValue(numberLength) = var passwordLength;
+
 
 /*
 var inputLength;
