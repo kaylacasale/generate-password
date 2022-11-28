@@ -1,7 +1,7 @@
-
-
-var errorEl = document.querySelector('.errorMessage')
+var errorEl = document.querySelector('.errorMessage');
 var numberInputEl = document.querySelector('.length');
+var changePEl = document.querySelector('.inputFor');
+var changePasswordEl = document.querySelector('.password');
 var numberLength;
 
 
@@ -12,7 +12,7 @@ document.querySelector('.enterLength').addEventListener('click', function () {
     if (!numberLength) {
         errorEl.innerHTML = "";
         console.log("You made it!");
-        errorEl.innerHTML = "Not a number";
+        errorEl.innerHTML = "ERROR: Not a number, please enter a value within the given range above.";
 
     } else if (
         (numberLength < 8) || (numberLength > 128)) {
@@ -21,17 +21,14 @@ document.querySelector('.enterLength').addEventListener('click', function () {
     } else {
         errorEl.innerHTML = "";
         //create div and p tag and update p tag to be password generated length
-        var passDivEl = document.createElement("div");
-        var passOlLength = document.createElement("ol");
-        var passLiLength = document.createElement("li");
-        passDivEl.textContent = "Password Length";
-        passDivEl.appendChild(passOlLength);
-        passOlLength.appendChild(passLiLength);
-        passLiLength.textContent = numberLength + " characters long";
+        changePasswordEl.textContent = numberLength + " characters long";
+        changePEl.textContent = "Press to generate a random number of UPPER case letters for your secure password."
 
         //document.querySelector('.password').innerHTML = numberLength + ' characters long';
     }
 });
+
+//var charactersLong =
 //errorEl. //to access global variable after input in function
 
 //console.log(numberLengthValue.numberLength.value);
