@@ -1,18 +1,4 @@
-document.querySelector('.enterLength').addEventListener('click', function () {
-    const numberLength = Number(document.querySelector('.length').value);
-    console.log(numberLength);
 
-    if (!numberLength) {
-        document.querySelector('.between').textContext = 'Not a NUMBER';
-    } else if (
-        (numberLength < 8) || (numberLength > 128)) {
-        document.querySelector('.between').textContent = 'Your number needs to be within 8 to 128';
-    } else {
-        document.querySelector('.password').innerHTML = numberLength + ' characters';
-    }
-});
-
-/*
 var inputLength;
 
 function getLength() {
@@ -48,5 +34,5 @@ function getUpperCaseNumber() {
 //store <input> in variable inputLength
 //#finds the text from id element
 //empty until I press button, <h1> tag id messageLength responds when press button
-*/
+
 
