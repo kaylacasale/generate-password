@@ -22,6 +22,7 @@ header p {
 }
 
 
+
 header .password {
     width: 400px;
     height: 100px;
@@ -62,4 +63,8 @@ section button {
     width: 200px;
     height: 50px;
     color: black;
+}
+
+#upperCaseSection {
+    display: none;
 }
