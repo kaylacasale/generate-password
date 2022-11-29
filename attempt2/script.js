@@ -11,8 +11,17 @@ var passwordLength;
 enterLengthEl.addEventListener('click', function () {
     numberLength = Number(numberInputEl.value);
     console.log(numberLength);
+    getNumberLength();
+});
 
+console.log(numberLength);
 
+function getNumberLength() {
+    if (!numberLength) {
+        errorEl.innerHTML = "";
+        console.log("You made it!");
+        errorEl.innerHTML = "ERROR: Not a number, please enter a value within the given range above.";
+    }
     if (!numberLength) {
         errorEl.innerHTML = "";
         console.log("You made it!");
@@ -32,10 +41,9 @@ enterLengthEl.addEventListener('click', function () {
 
         //document.querySelector('.password').innerHTML = numberLength + ' characters long';
     }
-});
 
-lengthFunction();
-console.log(numberLength);
+
+
 
 //getLength(numberLength);
 
