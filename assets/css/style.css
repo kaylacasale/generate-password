@@ -68,3 +68,12 @@ section button {
 #upperCaseSection {
     display: none;
 }
+
+#generateUpper {
+    display: block;
+    background-color: black;
+    color: greenyellow;
+    height: 50px;
+    width: 200px;
+    color: whitesmoke;
+}

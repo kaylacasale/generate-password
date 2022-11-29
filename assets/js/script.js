@@ -27,7 +27,7 @@ document.querySelector('.enterLength').addEventListener('click', function () {
         //errorEl.innerHTML = "";
         //create div and p tag and update p tag to be password generated length
         changePasswordEl.textContent = numberLength + " characters long";
-        changePEl.textContent = "PRESS: button Upper Case Letters.";
+        changePEl.textContent = "PRESS button: Upper Case Letters.";
         changePEl.setAttribute("style", "color: red")
         body.appendChild(lengthDone);
         lengthDone.textContent = "Length = " + numberLength + " characters";
@@ -41,8 +41,10 @@ document.querySelector('.enterLength').addEventListener('click', function () {
 });
 var lengthToUpper = document.querySelector('.again');
 var selectUpper = document.getElementById('upperCaseSection');
-var selectUpperButton = document.querySelector('.upperCaseSection.enterLength');
-
+//var selectUpperButton = document.querySelector('.upperCaseSection.enterLength');
+var upperCaseLetters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ';
+var upperCaseLettersLength = upperCaseLetters.length;
+var generateUpperEl = document.getElementById('generateUpper');
 
 
 
@@ -51,6 +53,20 @@ lengthToUpper.addEventListener('click', function () {
 });
 
 
+document.querySelector('.randomUpperCase').addEventListener('click', function () {
+    console.log(numberLength);
+    for (var i = 0; i < numberLength + 1; i++) {
+        generateUpperEl = Math.floor(Math.random() * upperCaseLettersLength)
+        console.log(generateUpperEl);
+        document.querySelector('#generateUpper').textContent = upperCaseLetters[generateUpperEl];
+
+
+
+    }
+
+
+
+})
 
 //getLength(numberLength);
 
