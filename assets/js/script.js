@@ -45,6 +45,8 @@ var selectUpper = document.getElementById('upperCaseSection');
 var upperCaseLetters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ';
 var upperCaseLettersLength = upperCaseLetters.length;
 var generateUpperEl = document.getElementById('generateUpper');
+//var randomUpperLetters = upperCaseLetters[random];
+
 
 
 
@@ -56,9 +58,26 @@ lengthToUpper.addEventListener('click', function () {
 document.querySelector('.randomUpperCase').addEventListener('click', function () {
     console.log(numberLength);
     for (var i = 0; i < numberLength + 1; i++) {
-        generateUpperEl = Math.floor(Math.random() * upperCaseLettersLength)
-        console.log(generateUpperEl);
-        document.querySelector('#generateUpper').textContent = upperCaseLetters[generateUpperEl];
+        random = upperCaseLetters[Math.floor(Math.random() * upperCaseLettersLength)];
+        console.log(random);
+        generateUpperEl.innerHTML = random;
+        //var randomUpperLetters = upperCaseLetters[random];
+        //console.log(randomUpperLetters);
+        //var concatUpper = ''.concat(randomUpperLetters);
+        //generateUpperEl.textContent = 'concatUpper';
+        //var concatUpper = ''.concat(random);
+        //console.log(concatUpper);
+        //generateUpperEl.textContent = concatUpper;
+        //joinUpper = Array.prototype.join(random);
+
+
+        //stringifyUpper = JSON.stringify(random);
+        //console.log(stringifyUpper);
+
+        //generateUpperEl.textContent = joinUpper
+
+
+
 
 
 
