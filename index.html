@@ -13,23 +13,40 @@
 
     <header>
         <h1>pA$sWoRd gEuerA+oR</h1>
-        <p class="between">(Between 8 and 128 characters)</p>
-        <p class="errorMessage"></p>
-        <button class="btn again">Length</button>
         <div class="password">?</div>
-        <p class="inputFor">How many characters would you like your password to be?</p>
+        <article class="length">
+            <label for="length">Enter desired password length!</label>
+            <input type="number" class="length" />
+            <button class="btn length">Enter</button>
+        </article>
     </header>
+    <form>
+        <div class="upperGroup">
+            <label for="upper">Upper Case Letters?</label>
+            <input type="checkbox" id="upper">
+            <button class="btn random" id="upper">Generate Random</button>
+            <p class="randomDisplay" id="randomUpper">☈</p>
+        </div>
+        <div class="lowerGroup">
+            <label for="lower">Lower Case Letters?</label>
+            <input type="checkbox" id="lower">
+        </div>
+        <div class="specialGroup">
+            <label for="special">Special Characters?</label>
+            <input type="checkbox" id="special">
+        </div>
+        <div class="numberGroup">
+            <label for="number">Numbers?</label>
+            <input type="checkbox" id="number">
+        </div>
+    </form>
+    <section class="error">
+        <p class="errorMessage">🌡</p>
+    </section>
 
-    <main>
-        <section class="bottomLeft">
-            <input type="number" class="length" id="lengthStyle" />
-            <button class="btn enterLength">Enter!</button>
-        </section>
-        <section class="bottomLeft" id="upperCaseSection">
-            <p id="generateUpper"></p>
-            <button class="btn randomUpperCase" id="">Generate Random Upper Case Letters</button>
-        </section>
-    </main>
+
+
+
     <!-- <div class=length>
         <h1>How long would you like your password to be?</h1>
         <input id="inputLength"> <br> <br>

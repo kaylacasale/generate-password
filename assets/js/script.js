@@ -1,3 +1,8 @@
+
+
+
+
+/*
 var errorEl = document.querySelector('.errorMessage');
 var numberInputEl = document.querySelector('.length');
 var changePEl = document.querySelector('.inputFor');

@@ -15,15 +15,9 @@ header h1 {
     text-align: center;
 }
 
-header p {
-    font-size: 15px;
-    display: flex;
-    justify-content: flex-end;
-}
 
 
-
-header .password {
+header div {
     width: 400px;
     height: 100px;
     margin: 0px auto;
@@ -39,41 +33,29 @@ header .password {
     font-size: 20px;
 }
 
-.inputFor {
+section article {
+    display: block;
+    background-color: black;
+    color: greenyellow;
+    height: 50px;
+    width: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.randomDisplay {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+}
+
+.error {
+    display: block;
     float: right;
-}
-
-main section {
-    background-color: greenyellow;
-    float: left;
-}
-
-section input {
-    display: block;
-    background-color: black;
-    color: greenyellow;
-    height: 50px;
-    width: 200px;
-    color: whitesmoke;
-}
-
-section button {
-    background-color: whitesmoke;
-    color: whitesmoke;
-    width: 200px;
-    height: 50px;
-    color: black;
-}
-
-#upperCaseSection {
-    display: none;
-}
-
-#generateUpper {
-    display: block;
-    background-color: black;
-    color: greenyellow;
-    height: 50px;
-    width: 200px;
-    color: whitesmoke;
+    background-color: rgb(233, 122, 122);
 }
