@@ -33,13 +33,6 @@ header div {
     font-size: 20px;
 }
 
-section article {
-    display: block;
-    background-color: black;
-    color: greenyellow;
-    height: 50px;
-    width: 200px;
-}
 
 form {
     display: flex;
@@ -48,10 +41,11 @@ form {
     justify-content: space-evenly;
 }
 
-.randomDisplay {
+.displayRandom {
     background-color: black;
     height: 50px;
     width: 50px;
+    color: white;
 }
 
 .error {
