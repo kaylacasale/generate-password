@@ -37,9 +37,9 @@ var upperCaseLetters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ';
 var upperCaseLettersLength = upperCaseLetters.length;
 var randomUpperText = document.querySelector("#randomUpper");
 var randomUpperBtn = document.querySelector(".upperBtn");
-var random = []
-var rUPPERS = []
 var addUpper = document.querySelector(".addUpper");
+var random = []
+var randomUppers = []
 
 randomUpperBtn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -54,10 +54,10 @@ randomUpperBtn.addEventListener('click', function (e) {
             var liTagUpper = document.createElement("p")
             liTagUpper.textContent = random;
             randomUpperText.appendChild(liTagUpper)
-            addUpper.textContent = "ADD Upper Case";
+            addUpper.textContent = "ADD Upper Cases";
             addUpper.setAttribute("style", "background-color:greenyellow");
-            rUPPERS.push(random);
-            console.log(rUPPERS);
+            randomUppers.push(random);
+            console.log(randomUppers);
         }
     }
 
@@ -69,6 +69,7 @@ var lowerCaseLettersLength = lowerCaseLetters.length;
 var randomLowerText = document.getElementById('randomLower');
 var randomLowerBtn = document.querySelector(".lowerBtn");
 var addLower = document.querySelector(".addLower");
+var randomLowers = []
 
 
 randomLowerBtn.addEventListener('click', function (e) {
@@ -84,8 +85,10 @@ randomLowerBtn.addEventListener('click', function (e) {
             var liTagLower = document.createElement("p")
             liTagLower.textContent = random;
             randomLowerText.appendChild(liTagLower)
-            addLower.textContent = "ADD Upper Case";
+            addLower.textContent = "ADD Lower Cases";
             addLower.setAttribute("style", "background-color:greenyellow");
+            randomLowers.push(random);
+            console.log(randomLowers);
         }
     }
 });
@@ -97,6 +100,8 @@ var specialCharsLength = specialChars.length;
 var randomSpecialText = document.getElementById('randomSpecial');
 var randomSpecialBtn = document.querySelector(".specialBtn");
 var addSpecial = document.querySelector(".addSpecial");
+var randomSpecials = []
+
 
 
 randomSpecialBtn.addEventListener('click', function (e) {
@@ -112,8 +117,10 @@ randomSpecialBtn.addEventListener('click', function (e) {
             var liTagSpecial = document.createElement("p")
             liTagSpecial.textContent = random;
             randomSpecialText.appendChild(liTagSpecial)
-            addSpecial.textContent = "ADD Upper Case";
+            addSpecial.textContent = "ADD Specials";
             addSpecial.setAttribute("style", "background-color:greenyellow");
+            randomSpecials.push(random);
+            console.log(randomSpecials);
         }
     }
 });
@@ -125,6 +132,7 @@ var NumbersLength = Numbers.length;
 var randomNumbersText = document.getElementById('randomNumber');
 var randomNumbersBtn = document.querySelector(".numberBtn");
 var addNumber = document.querySelector(".addNumber");
+var randomNumbers = []
 
 
 randomNumbersBtn.addEventListener('click', function (e) {
@@ -140,34 +148,62 @@ randomNumbersBtn.addEventListener('click', function (e) {
             var liTagNumbers = document.createElement("p")
             liTagNumbers.textContent = random;
             randomNumbersText.appendChild(liTagNumbers)
-            addNumber.textContent = "ADD Upper Case";
+            addNumber.textContent = "ADD Numbers";
             addNumber.setAttribute("style", "background-color:greenyellow");
+            randomNumbers.push(random);
+            console.log(randomNumbers);
         }
     }
 });
 
 
 
-var addBtn = document.querySelector(".addUpper")
+var addBtnUpper = document.querySelector(".addUpper")
 var divPassword = document.getElementById('addPassword');
 
 
-addBtn.addEventListener('click', function (e) {
+addBtnUpper.addEventListener('click', function (e) {
     e.preventDefault();
     console.log("Adding Random Values");
     var DivTagPassword = document.createElement("label")
-    DivTagPassword.textContent = "\n" + rUPPERS;
+    DivTagPassword.textContent = "\n" + randomUppers;
     divPassword.appendChild(DivTagPassword);
-})
+});
 
-// console.log(random);
-// var passListEl = document.createElement("ol");
-// var passLi = document.createElement("li");
-// passListEl.textContent = random;
-// passwordDiv.appendChild(passListEl);
-// passListEl.appendChild(passLi);
 
-// var h2El = document.createElement("h2");
-// h2El.textContent = random.value;
-// passwordDiv.appendChild(h2El);
-// console.log(h2El.textContent)
+
+var addBtnLower = document.querySelector(".addLower")
+
+
+addBtnLower.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log("Adding Random Values");
+    var DivTagPassword = document.createElement("label")
+    DivTagPassword.textContent = "\n" + randomLowers;
+    divPassword.appendChild(DivTagPassword);
+});
+
+
+var addBtnSpecial = document.querySelector(".addSpecial")
+
+
+addBtnSpecial.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log("Adding Random Values");
+    var DivTagPassword = document.createElement("label")
+    DivTagPassword.textContent = "\n" + randomSpecials;
+    divPassword.appendChild(DivTagPassword);
+});
+
+
+var addBtnNumber = document.querySelector(".addNumber")
+
+
+addBtnNumber.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log("Adding Random Values");
+    var DivTagPassword = document.createElement("label")
+    DivTagPassword.textContent = "\n" + randomNumbers;
+    divPassword.appendChild(DivTagPassword);
+});
+

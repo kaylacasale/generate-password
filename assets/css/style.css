@@ -19,7 +19,7 @@ header h1 {
 
 header div {
     width: 400px;
-    height: 100px;
+    height: 125px;
     margin: 0px auto;
 
 }
@@ -31,6 +31,8 @@ header div {
     text-align: center;
     color: greenyellow;
     font-size: 20px;
+    height: 600px inherit;
+
 }
 
 
@@ -43,7 +45,7 @@ form {
 
 .displayRandomUpper {
     background-color: black;
-    height: 600px;
+    height: inherit;
     width: 50px;
     color: white;
     text-align: center;
@@ -52,7 +54,7 @@ form {
 
 .displayRandomLower {
     background-color: black;
-    height: 600px;
+    height: inherit;
     width: 50px;
     color: white;
     text-align: center;
@@ -61,7 +63,7 @@ form {
 
 .displayRandomSpecial {
     background-color: black;
-    height: 600px;
+    height: inherit;
     width: 50px;
     color: white;
     text-align: center;
@@ -70,7 +72,7 @@ form {
 
 .displayRandomNumbers {
     background-color: black;
-    height: 600px;
+    height: inherit;
     width: 50px;
     color: white;
     text-align: center;
