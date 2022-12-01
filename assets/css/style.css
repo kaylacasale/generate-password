@@ -77,6 +77,35 @@ form {
     padding-top: 10px;
 }
 
+.addUpper {
+    background-color: red;
+    border-radius: 5px;
+    border-color: black;
+    width: inherit;
+}
+
+.addLower {
+    background-color: red;
+    border-radius: 5px;
+    border-color: black;
+    width: inherit;
+}
+
+.addSpecial {
+    background-color: red;
+    border-radius: 5px;
+    border-color: black;
+    width: inherit;
+}
+
+.addNumber {
+    background-color: red;
+    border-radius: 5px;
+    border-color: black;
+    width: inherit
+}
+
+
 .error {
     display: block;
     float: right;
