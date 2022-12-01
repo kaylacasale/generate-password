@@ -33,40 +33,110 @@ lengthBtn.addEventListener('click', function () {
 });
 
 
-var randomBtns = document.getElementsByClassName('random');
+// var randomBtns = document.getElementsByClassName('random');
 
 
-for (var i = 0; i < randomBtns.length; i++) {
-    randomBtns[i].addEventListener("click", function (e) {
-        e.preventDefault();
-        length = Number(lengthInput.value);
-        if (!length) {
-            //pElError.textContent = "";
-            pElError.textContent = "ERROR: Cannot begin generating without length number input";
+// for (var i = 0; i < randomBtns.length; i++) {
+//     randomBtns[i].addEventListener("click", function (e) {
+//         e.preventDefault();
+//         length = Number(lengthInput.value);
+//         if (!length) {
+//             //pElError.textContent = "";
+//             pElError.textContent = "ERROR: Cannot begin generating without length number input";
 
-        }
-    })
-};
+//         }
+//     })
+// };
 
 
 var upperCaseLetters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ';
 var upperCaseLettersLength = upperCaseLetters.length;
-var randomUpperText = document.getElementById('randomUpper');
-var randomUpperBtn = document.getElementById("upperBtn");
+var randomUpperText = document.querySelector("#randomUpper");
+var randomUpperBtn = document.querySelector(".upperBtn");
 
-randomUpperBtn.addEventListener('click', function () {
+randomUpperBtn.addEventListener('click', function (e) {
+    e.preventDefault();
     console.log("Generating Random Upper");
     length = Number(lengthInput.value);
-    for (var i = 0; i < length + 1; i++) {
-        random = upperCaseLetters[Math.floor(Math.random() * upperCaseLettersLength)];
-        console.log(random);
-        var liTag = document.createElement("p")
-        liTag.textContent = random;
-        randomUpperText.appendChild(liTag)
+    if (!length) {
+        pElError.textContent = "ERROR: Cannot begin generating without length number input";
+    } else {
+        for (var i = 0; i < length + 1; i++) {
+            random = upperCaseLetters[Math.floor(Math.random() * upperCaseLettersLength)];
+            console.log(random);
+            var liTagUpper = document.createElement("p")
+            liTagUpper.textContent = random;
+            randomUpperText.appendChild(liTagUpper)
+        }
+    }
+});
+
+var lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+var lowerCaseLettersLength = lowerCaseLetters.length;
+var randomLowerText = document.getElementById('randomLower');
+var randomLowerBtn = document.querySelector(".lowerBtn");
+
+randomLowerBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log("Generating Random Lower");
+    length = Number(lengthInput.value);
+    if (!length) {
+        pElError.textContent = "ERROR: Cannot begin generating without length number input";
+    } else {
+        for (var i = 0; i < length + 1; i++) {
+            random = lowerCaseLetters[Math.floor(Math.random() * lowerCaseLettersLength)];
+            console.log(random);
+            var liTagLower = document.createElement("p")
+            liTagLower.textContent = random;
+            randomLowerText.appendChild(liTagLower)
+        }
     }
 });
 
 
+var specialChars = "!#$%&'()*+,-./:;<^=>?@[_`{|}~";
+var specialCharsLength = specialChars.length;
+var randomSpecialText = document.getElementById('randomSpecial');
+var randomSpecialBtn = document.querySelector(".specialBtn");
+
+randomSpecialBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log("Generating Random Lower");
+    length = Number(lengthInput.value);
+    if (!length) {
+        pElError.textContent = "ERROR: Cannot begin generating without length number input";
+    } else {
+        for (var i = 0; i < length + 1; i++) {
+            random = specialChars[Math.floor(Math.random() * specialCharsLength)];
+            console.log(random);
+            var liTagSpecial = document.createElement("p")
+            liTagSpecial.textContent = random;
+            randomSpecialText.appendChild(liTagSpecial)
+        }
+    }
+});
+
+var Numbers = "0123456789";
+var NumbersLength = Numbers.length;
+var randomNumbersText = document.getElementById('randomNumber');
+var randomNumbersBtn = document.querySelector(".numberBtn");
+
+randomNumbersBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log("Generating Random Lower");
+    length = Number(lengthInput.value);
+    if (!length) {
+        pElError.textContent = "ERROR: Cannot begin generating without length number input";
+    } else {
+        for (var i = 0; i < length + 1; i++) {
+            random = Numbers[Math.floor(Math.random() * NumbersLength)];
+            console.log(random);
+            var liTagNumbers = document.createElement("p")
+            liTagNumbers.textContent = random;
+            randomNumbersText.appendChild(liTagNumbers)
+        }
+    }
+});
 
 // function upperCheck() {
 //     var upperCheckBox = document.getElementById("#upperCheckBox");

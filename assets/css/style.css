@@ -41,11 +41,40 @@ form {
     justify-content: space-evenly;
 }
 
-.displayRandom {
+.displayRandomUpper {
     background-color: black;
-    height: 50px;
+    height: 600px;
     width: 50px;
     color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.displayRandomLower {
+    background-color: black;
+    height: 600px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.displayRandomSpecial {
+    background-color: black;
+    height: 600px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.displayRandomNumbers {
+    background-color: black;
+    height: 600px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .error {
