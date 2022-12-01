@@ -1,7 +1,122 @@
 
+// what elements to I need to grab to allow interaction...
+
+var pElError = document.querySelector('.errorMessage');
+//var checkBoxInput = document.getElementByType('checkbox');
+
+//console.log(upperCheckBox.checked);
+
+var lengthInput = document.querySelector('.lengthInput');
+//var length = Number(lengthInput.value);
+//length = Number(lengthInput.value);
+var lengthBtn = document.querySelector('.length');
+var passwordDiv = document.querySelector('.password');
 
 
 
+lengthBtn.addEventListener('click', function () {
+    length = Number(lengthInput.value);
+    console.log(length);
+    if (!length) {
+        pElError.textContent = "ERROR: Cannot begin generating without length number input";
+        randomBtns.disabled = true;
+    } else if (
+        (length < 8) || (length > 128)) {
+        pElError.textContent = "";
+        pElError.textContent = "ERROR: Your number needs to be above 7  and below 128 characters in length";
+        randomBtns.disabled = true;
+    } else {
+        passwordDiv.textContent = length + " characters";
+        randomBtns.disabled = false;
+    }
+
+});
+
+
+var randomBtns = document.getElementsByClassName('random');
+
+
+for (var i = 0; i < randomBtns.length; i++) {
+    randomBtns[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        length = Number(lengthInput.value);
+        if (!length) {
+            //pElError.textContent = "";
+            pElError.textContent = "ERROR: Cannot begin generating without length number input";
+
+        }
+    })
+};
+
+
+var upperCaseLetters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ';
+var upperCaseLettersLength = upperCaseLetters.length;
+var randomUpperText = document.getElementById('randomUpper');
+var randomUpperBtn = document.getElementById("upperBtn");
+
+randomUpperBtn.addEventListener('click', function () {
+    console.log("Generating Random Upper");
+    length = Number(lengthInput.value);
+    for (var i = 0; i < length + 1; i++) {
+        random = upperCaseLetters[Math.floor(Math.random() * upperCaseLettersLength)];
+        console.log(random);
+        var liTag = document.createElement("p")
+        liTag.textContent = random;
+        randomUpperText.appendChild(liTag)
+    }
+});
+
+
+
+// function upperCheck() {
+//     var upperCheckBox = document.getElementById("#upperCheckBox");
+
+//     if (upperCheckBox.checked == true) {
+//         console.log("true");
+//     }
+// }
+// var randomUpperBtn = document.querySelector("#upperBtn");
+
+
+// var pElRandomUpperTxt = document.querySelector("#randomUpper");
+
+// upperCheckBox.addEventListener("click", function () {
+//     if (upperCheckBox.value === true) {
+//         console.log("checked");
+//         pElRandomUpperTxt.textContent = "PRESS: Generate Random";
+
+//     }
+// })
+// if (upperCheckBox.value === true) {
+//     console.log("checked");
+
+
+// }
+
+
+// randomBtns[i].addEventListener('click', function () {
+//     length = Number(lengthInput.value);
+//     for (var i = 0; i < randomBtns.length; i++) {
+//         if (!length) {
+//             pElError = "ERROR: cannot begin generating without length number input";
+//         }
+//     }
+// });
+
+
+// randomBtns.addEventListener('click', function () {
+//     length = Number(lengthInput.value);
+//     for (var i = 0; i < randomBtns.length; i++) {
+
+//     }
+//     }
+
+// });
+
+
+// if (!checkBoxInput) {
+//     pElError.textContent = "You need to check atlast one  type to start generating!"
+// }
 /*
 var errorEl = document.querySelector('.errorMessage');
 var numberInputEl = document.querySelector('.length');
