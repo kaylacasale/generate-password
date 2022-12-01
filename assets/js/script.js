@@ -32,27 +32,13 @@ lengthBtn.addEventListener('click', function () {
 });
 
 
-// var randomBtns = document.getElementsByClassName('random');
-
-
-// for (var i = 0; i < randomBtns.length; i++) {
-//     randomBtns[i].addEventListener("click", function (e) {
-//         e.preventDefault();
-//         length = Number(lengthInput.value);
-//         if (!length) {
-//             //pElError.textContent = "";
-//             pElError.textContent = "ERROR: Cannot begin generating without length number input";
-
-//         }
-//     })
-// };
-
 
 var upperCaseLetters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ';
 var upperCaseLettersLength = upperCaseLetters.length;
 var randomUpperText = document.querySelector("#randomUpper");
 var randomUpperBtn = document.querySelector(".upperBtn");
-random = []
+var random = []
+var rUPPERS = []
 var addUpper = document.querySelector(".addUpper");
 
 randomUpperBtn.addEventListener('click', function (e) {
@@ -70,16 +56,13 @@ randomUpperBtn.addEventListener('click', function (e) {
             randomUpperText.appendChild(liTagUpper)
             addUpper.textContent = "ADD Upper Case";
             addUpper.setAttribute("style", "background-color:greenyellow");
-
-
+            rUPPERS.push(random);
+            console.log(rUPPERS);
         }
     }
 
 });
 
-console.log(random);
-var randomUppers = random;
-console.log(randomUppers);
 
 var lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz';
 var lowerCaseLettersLength = lowerCaseLetters.length;
@@ -107,9 +90,7 @@ randomLowerBtn.addEventListener('click', function (e) {
     }
 });
 
-console.log(random);
-var randomUppers = random;
-console.log(randomUppers);
+
 
 var specialChars = "!#$%&'()*+,-./:;<^=>?@[_`{|}~";
 var specialCharsLength = specialChars.length;
@@ -167,7 +148,17 @@ randomNumbersBtn.addEventListener('click', function (e) {
 
 
 
+var addBtn = document.querySelector(".addUpper")
+var divPassword = document.getElementById('addPassword');
 
+
+addBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log("Adding Random Values");
+    var DivTagPassword = document.createElement("label")
+    DivTagPassword.textContent = "\n" + rUPPERS;
+    divPassword.appendChild(DivTagPassword);
+})
 
 // console.log(random);
 // var passListEl = document.createElement("ol");
