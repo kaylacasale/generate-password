@@ -207,3 +207,43 @@ addBtnNumber.addEventListener('click', function (e) {
     divPassword.appendChild(DivTagPassword);
 });
 
+// var allChars = [...randomUppers, ...randomLowers, ...randomSpecials, ...randomNumbers];
+// console.log(allChars);
+
+// var addAllCharacters = randomUppers.concat[randomLowers, randomSpecials, randomNumbers];
+var addedCharactersBtn = document.querySelector(".addedCharacters");
+
+// console.log(addAllCharacters);
+var randomAll = []
+
+addedCharactersBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    randomizeAll();
+
+    // randomAll.push(randomUppers);
+    // randomAll.push(randomLowers);
+    // randomAll.push(randomSpecials);
+    // randomAll.push(randomNumbers);
+
+
+    // console.log(randomAll);
+
+});
+
+
+var randomAllTogether = randomAll.join();
+length = Number(lengthInput.value);
+var all = []
+// var upperRanomized = randomUppers.join();
+var choose = length.length / 4
+var chosenU = randomUppers[0, choose];
+
+
+function randomizeAll() {
+    console.log(chosenU);
+
+
+
+
+
+};

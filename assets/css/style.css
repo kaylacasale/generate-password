@@ -35,6 +35,12 @@ header div {
 
 }
 
+.addedCharacters {
+    float: right;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    font-size: 20px;
+}
 
 form {
     display: flex;
