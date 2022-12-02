@@ -7,6 +7,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     color: black;
+    background-color: lemonchiffon;
 }
 
 
@@ -27,7 +28,7 @@ header div {
 .displayPassword {
     text-align: center;
     background-color: silver;
-    border-radius: 10px;
+    border-radius: 20px 20px 0px 0px;
     color: darkgoldenrod;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
@@ -40,6 +41,7 @@ header div {
     color: greenyellow;
     font-size: 20px;
     height: 600px inherit;
+    width: 100%;
 
 }
 
