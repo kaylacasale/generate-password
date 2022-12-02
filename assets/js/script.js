@@ -229,10 +229,11 @@ addedCharactersBtn.addEventListener('click', function (e) {
     for (var i = 0; i < length; i++) {
         var chars = random[Math.floor(Math.random() * random.length)];
         passwordChars.push(chars);
-        pElDisplay.textContent = passwordChars;
+        var passwordString = passwordChars.join(" ");
+        pElDisplay.textContent = passwordString;
 
     }
-    console.log(passwordChars);
+    console.log(passwordString);
 });
 // var pElDisplay = document.querySelector(".passwordDisplay");
 
