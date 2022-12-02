@@ -24,7 +24,15 @@ header div {
 
 }
 
-
+.displayPassword {
+    text-align: center;
+    background-color: silver;
+    border-radius: 10px;
+    color: darkgoldenrod;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    border-color: lightgoldenrodyellow;
+}
 
 .password {
     background-color: black;
@@ -37,8 +45,9 @@ header div {
 
 .addedCharacters {
     float: right;
-    background-color: blanchedalmond;
+    background-color: lightgoldenrodyellow;
     border-radius: 5px;
+    border-color: silver;
     font-size: 20px;
 }
 
@@ -88,28 +97,28 @@ form {
 .addUpper {
     background-color: red;
     border-radius: 5px;
-    border-color: black;
+    border-color: lightgray;
     width: inherit;
 }
 
 .addLower {
     background-color: red;
     border-radius: 5px;
-    border-color: black;
+    border-color: lightgray;
     width: inherit;
 }
 
 .addSpecial {
     background-color: red;
     border-radius: 5px;
-    border-color: black;
+    border-color: lightgray;
     width: inherit;
 }
 
 .addNumber {
     background-color: red;
     border-radius: 5px;
-    border-color: black;
+    border-color: lightgray;
     width: inherit
 }
 
@@ -118,4 +127,7 @@ form {
     display: block;
     float: right;
     background-color: rgb(233, 122, 122);
+    border-radius: 10px 0px 0px 10px;
+    margin: 2px;
+    padding: 5px;
 }

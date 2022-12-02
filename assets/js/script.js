@@ -218,33 +218,35 @@ addBtnNumber.addEventListener('click', function (e) {
 var addedCharactersBtn = document.querySelector(".addedCharacters");
 
 // console.log(addAllCharacters);
-var randomAll = []
+var passwordChars = [];
+
+var pElDisplay = document.querySelector(".displayPassword");
+
 
 addedCharactersBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    chooseRandom();
-
-    // randomAll.push(randomUppers);
-    // randomAll.push(randomLowers);
-    // randomAll.push(randomSpecials);
-    // randomAll.push(randomNumbers);
-
-
-    // console.log(randomAll);
-
-});
-var pElDisplay = document.querySelector(".passwordDisplay");
-
-length = Number(lengthInput.value);
-function chooseRandom() {
+    length = Number(lengthInput.value);
     for (var i = 0; i < length; i++) {
-        var choosePassword = random[Math.floor(Math.random() * random.length)];
-        randomAll.push(choosePassword);
-    }
-    console.log(randomAll);
-    pElDisplay.textContent = randomAll;
+        var chars = random[Math.floor(Math.random() * random.length)];
+        passwordChars.push(chars);
+        pElDisplay.textContent = passwordChars;
 
-}
+    }
+    console.log(passwordChars);
+});
+// var pElDisplay = document.querySelector(".passwordDisplay");
+
+// length = Number(lengthInput.value);
+// function chooseRandom() {
+//     for (var i = 0; i < length; i++) {
+//         var choosePassword = random[Math.floor(Math.random() * random.length)];
+//         randomAll.push(choosePassword);
+//         pElDisplay.textContent = randomAll;
+
+//     }
+//     console.log(randomAll);
+
+// }
 
 
 // var divTagDisplay = document.querySelector(".passwordDisplay");
