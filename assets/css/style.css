@@ -7,7 +7,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     color: black;
-    background-color: lemonchiffon;
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 
@@ -27,18 +27,18 @@ header div {
 
 .displayPassword {
     text-align: center;
-    background-color: silver;
-    border-radius: 20px 20px 0px 0px;
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 30px 30px 0px 0px;
     color: darkgoldenrod;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
-    border-color: lightgoldenrodyellow;
+    border-color: #ae5858;
 }
 
 .password {
     background-color: black;
     text-align: center;
-    color: greenyellow;
+    color: #b9bbeb;
     font-size: 20px;
     height: 600px inherit;
     width: 100%;
@@ -47,10 +47,11 @@ header div {
 
 .addedCharacters {
     float: right;
-    background-color: lightgoldenrodyellow;
+    background-color: #9196f0;
     border-radius: 5px;
     border-color: silver;
     font-size: 20px;
+    margin-top: 2px;
 }
 
 form {
@@ -60,13 +61,41 @@ form {
     justify-content: space-evenly;
 }
 
+.upperBtn {
+    border-color: white;
+    border-radius: 2px;
+    background-color: #E7E7E7;
+    box-shadow: 2px 1px 1px palevioletred;
+}
+
+.lowerBtn {
+    border-color: white;
+    border-radius: 2px;
+    background-color: #E7E7E7;
+    box-shadow: 2px 1px 1px palevioletred;
+}
+
+.specialBtn {
+    border-color: white;
+    border-radius: 2px;
+    background-color: #E7E7E7;
+    box-shadow: 2px 1px 1px palevioletred;
+}
+
+.numberBtn {
+    border-color: white;
+    border-radius: 2px;
+    background-color: #E7E7E7;
+    box-shadow: 2px 1px 1px palevioletred;
+}
+
 .displayRandomUpper {
     background-color: black;
     height: inherit;
     width: 50px;
     color: white;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 10px
 }
 
 .displayRandomLower {
@@ -97,28 +126,28 @@ form {
 }
 
 .addUpper {
-    background-color: red;
+    background-color: #D98794;
     border-radius: 5px;
     border-color: lightgray;
     width: inherit;
 }
 
 .addLower {
-    background-color: red;
+    background-color: #D98794;
     border-radius: 5px;
     border-color: lightgray;
     width: inherit;
 }
 
 .addSpecial {
-    background-color: red;
+    background-color: #D98794;
     border-radius: 5px;
     border-color: lightgray;
     width: inherit;
 }
 
 .addNumber {
-    background-color: red;
+    background-color: #D98794;
     border-radius: 5px;
     border-color: lightgray;
     width: inherit
