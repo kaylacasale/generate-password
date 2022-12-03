@@ -64,7 +64,7 @@ THEN the password is displayed right above the black board, in place of the icon
 
 
 ## Directions 
-![The Password Generator applicaiton displays a lock icon to "Generate Password"](<iframe src="https://giphy.com/embed/55VeBIYZcyT0Ko7GPw" width="480" height="311" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/generate-random-password-55VeBIYZcyT0Ko7GPw">via GIPHY</a></p>)
+![The Password Generator applicaiton displays a lock icon to "Generate Password"](https://media.giphy.com/media/55VeBIYZcyT0Ko7GPw/giphy.gif)
 
 
 
