@@ -1,7 +1,7 @@
 # pA$sWoRd gEuerA+oR 🔗
 ## generate-password
 A public platform that generates a random password of your desired length and character type(s).
-➬
+
 ## Creation 👩🏼‍💻
 I developed this web application from scratch, deciding not to refactor given starter code to allow complete control over the programming and design process while adhering to all user stories and code requirements. While this password-generator exerts true and complete randomness over which Upper Case, Lower Case, Special Character, and Numbers will be generated and included in the password, it also allows users to pick desired password lengths (the given password range is between 8 and 128 characters in length).
 
