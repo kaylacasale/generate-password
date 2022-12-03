@@ -16,14 +16,14 @@ Link to password generator: https://kaylacasale.github.io/generate-password/
 Link to GitHub repository: https://github.com/kaylacasale/generate-password
 
 
-## User Story
+## User Story 📖
 AS a web developer targeting employees with access to sensitive data
 
 I WANT to randomly generate a password
 
 SO THAT I can create a strong password for users that provides greater security
 
-## Acceptance Criteria
+## Acceptance Criteria ✅
 GIVEN I am a user in need of a new, secure password
 
 WHEN I click the button to generate a password
@@ -63,8 +63,9 @@ WHEN I click the icon "🔓" and generate the password
 THEN the password is displayed right above the black board, in place of the icon "🔗"
 
 
-## Directions 
+## Mock-Up 🖥
 ![The Password Generator applicaiton displays a lock icon to "Generate Password"](https://media.giphy.com/media/55VeBIYZcyT0Ko7GPw/giphy.gif)
 
 
-
+## Focus Points 👾
+JavaScript UI, Conditional Statements, Arrays, Iteration, Functions, Scope, Methods, Objects, Object-Methods, Traversing DOM, Setting Attributes in JS, Creating and Appending Elements, Event Listener, Preventing Default
