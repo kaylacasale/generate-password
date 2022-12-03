@@ -2,6 +2,11 @@
 ## generate-password
 A public platform that generates a random password of desired length and character type(s).
 
+## Installation 🔨
+**Link to password generator:** https://kaylacasale.github.io/generate-password/
+
+**Link to GitHub repository:** https://github.com/kaylacasale/generate-password
+
 ## Creation 👩🏼‍💻
 I developed this web application from scratch, deciding not to refactor given starter code to allow complete control over the programming and design process while adhering to all user stories and code requirements. While this password-generator exerts true and complete randomness over which Upper Case, Lower Case, Special Character, and Numbers will be generated and included in the password, it also allows users to pick desired password lengths (the given password range is between 8 and 128 characters in length).
 
@@ -10,10 +15,9 @@ I developed this web application from scratch, deciding not to refactor given st
 
 🔘 Inventory protocols that require local pins/barcodes for employee use that need to be fit on standard-sized items (e.g. computers, COVID tests, etc.). 
 
-## Installation 🔨
-**Link to password generator:** https://kaylacasale.github.io/generate-password/
-
-**Link to GitHub repository:** https://github.com/kaylacasale/generate-password
+## Relevant Background 📝
+🔘 **National Inventory Supervisor** | The Testing Co., LLC
+Hired as an executive managing Operations at a healthcare startup company during a period of rapid growth- from hundreds of local patients to over 200,000+ patients across the nation. Quick data, reliable was neccessary amidst high demand and severe health concerns during the pandemic. Labels were made rapidly, and drawing barcodes during quick sampling was sometimes illegible.
 
 
 ## User Story 📖
