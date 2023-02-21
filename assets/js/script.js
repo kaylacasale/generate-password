@@ -11,6 +11,8 @@ var lengthInput = document.querySelector('.lengthInput');
 //length = Number(lengthInput.value);
 var lengthBtn = document.querySelector('.length');
 var passwordDiv = document.querySelector('.password');
+const generateBtn = document.getElementById('generate')
+generateBtn.setAttribute('style', 'display: none')
 
 
 
@@ -62,6 +64,8 @@ randomUpperBtn.addEventListener('click', function (e) {
         }
         console.log(random);
         randomUpperBtn.setAttribute("style", "display: none")
+        generateBtn.setAttribute("style", "display: block")
+
     }
 
 });
@@ -95,6 +99,7 @@ randomLowerBtn.addEventListener('click', function (e) {
         }
         console.log(random)
         randomLowerBtn.setAttribute("style", "display: none")
+        generateBtn.setAttribute("style", "display: block")
     }
 });
 
@@ -129,6 +134,7 @@ randomSpecialBtn.addEventListener('click', function (e) {
         }
         console.log(random)
         randomSpecialBtn.setAttribute("style", "display: none")
+        generateBtn.setAttribute("style", "display: block")
     }
 });
 
@@ -162,6 +168,7 @@ randomNumbersBtn.addEventListener('click', function (e) {
         }
         console.log(random);
         randomNumbersBtn.setAttribute("style", "display: none")
+        generateBtn.setAttribute("style", "display: block")
 
     }
 });
