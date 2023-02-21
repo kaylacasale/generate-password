@@ -54,7 +54,7 @@ randomUpperBtn.addEventListener('click', function (e) {
             var liTagUpper = document.createElement("p")
             liTagUpper.textContent = letter;
             randomUpperText.appendChild(liTagUpper)
-            addUpper.textContent = "ADD Upper Cases";
+            addUpper.textContent = "SEE Upper Cases";
             addUpper.setAttribute("style", "background-color:greenyellow");
             randomUppers.push(letter);
             random.push(letter);
@@ -86,7 +86,7 @@ randomLowerBtn.addEventListener('click', function (e) {
             var liTagLower = document.createElement("p")
             liTagLower.textContent = letter;
             randomLowerText.appendChild(liTagLower)
-            addLower.textContent = "ADD Lower Cases";
+            addLower.textContent = "SEE Lower Cases";
             addLower.setAttribute("style", "background-color:greenyellow");
             randomLowers.push(letter);
             random.push(letter);
@@ -119,7 +119,7 @@ randomSpecialBtn.addEventListener('click', function (e) {
             var liTagSpecial = document.createElement("p")
             liTagSpecial.textContent = letter;
             randomSpecialText.appendChild(liTagSpecial)
-            addSpecial.textContent = "ADD Specials";
+            addSpecial.textContent = "SEE Specials";
             addSpecial.setAttribute("style", "background-color:greenyellow");
             randomSpecials.push(letter);
             random.push(letter);
@@ -151,7 +151,7 @@ randomNumbersBtn.addEventListener('click', function (e) {
             var liTagNumbers = document.createElement("p")
             liTagNumbers.textContent = letter;
             randomNumbersText.appendChild(liTagNumbers)
-            addNumber.textContent = "ADD Numbers";
+            addNumber.textContent = "SEE Numbers";
             addNumber.setAttribute("style", "background-color:greenyellow");
             randomNumbers.push(letter);
             random.push(letter);
@@ -164,7 +164,7 @@ randomNumbersBtn.addEventListener('click', function (e) {
 
 var addBtnUpper = document.querySelector(".addUpper")
 var divPassword = document.getElementById('addPassword');
-
+// var uppers = document.querySelector('.uppersAdded')
 
 addBtnUpper.addEventListener('click', function (e) {
     e.preventDefault();
@@ -172,6 +172,7 @@ addBtnUpper.addEventListener('click', function (e) {
     var DivTagPassword = document.createElement("p")
     DivTagPassword.textContent = "\n" + randomUppers;
     divPassword.appendChild(DivTagPassword);
+    // uppers.textContent = randomUppers;
 });
 
 
@@ -221,7 +222,15 @@ var addedCharactersBtn = document.querySelector(".addedCharacters");
 var passwordChars = [];
 
 var pElDisplay = document.querySelector(".displayPassword");
+var displayPasswordString = document.querySelector(".displayPasswordInner")
+const passwordLabelDiv = document.querySelector('.passwordLabel')
 
+
+// copyBtn.addEventListener('click', function copyPassword(passwordString) {
+//     navigator.clipboard.writeText(passwordString.value);
+//     alert("Copied the generated password to your clipboard: " + passwordString.value);
+
+// })
 
 addedCharactersBtn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -230,11 +239,65 @@ addedCharactersBtn.addEventListener('click', function (e) {
         var chars = random[Math.floor(Math.random() * random.length)];
         passwordChars.push(chars);
         var passwordString = passwordChars.join(" ");
+        pElDisplay.setAttribute("class", "passwordString")
         pElDisplay.textContent = passwordString;
+        // const passwordLabel = document.createElement("p");
+        // passwordLabelDiv.appendChild(passwordLabel)
+        passwordLabelDiv.textContent = "Your Generated Password Below:"
+        displayPasswordString.textContent = passwordString;
 
     }
+    // copyPassword(pElDisplay)
     console.log(passwordString);
+    // document.querySelector('.displayPassword').id = "getPass";
+
+
+    // copyBtn.addEventListener('click', function copyPassword() {
+    //     navigator.clipboard.writeText(pElDisplay.value);
+    //     alert("Copied the generated password to your clipboard: " + pElDisplay.value);
+
+    // })
+
+    // function copyPassword() {
+    //     console.log(pElDisplay.value)
+    //     // const copyLabel = document.createElement("p");
+    //     // copyLabel.appendChild(labelDiv)
+
+    //     // pElDisplay.select();
+    //     // displayPasswordString.setSelectionRange(0, 99999);
+    //     navigator.clipboard.writeText(pElDisplay.value);
+    //     alert("Copied the generated password to your clipboard: " + pElDisplay.value);
+    // }
+
 });
+
+// const copyBtn = document.querySelector('.copyButton')
+// copyBtn.addEventListener('click', function copyPassword(passwordString) {
+//     navigator.clipboard.writeText(passwordString);
+//     alert("Copied the generated password to your clipboard: " + displayPasswordString.value);
+
+// })
+// pElDisplay.addEventListener('onclick', copyPassword())
+
+const labelDiv = document.getElementById('labelDivPEl')
+const passGot = document.getElementById('getPass')
+const copyBtn = document.querySelector('.copyButton')
+const buttonlabel = document.getElementById('copyPass')
+
+function copyPassword() {
+    buttonlabel.textContent = "COPY"
+    console.log(passGot)
+
+    const pass = passGot.innerHTML
+    labelDiv.textContent = "Copy To Clipboard: "
+    // const copyLabel = document.createElement("p");
+    // copyLabel.appendChild(labelDiv)
+
+    // pElDisplay.select();
+    // displayPasswordString.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(pass);
+    alert("Copied the generated password to your clipboard: " + pass);
+}
 // var pElDisplay = document.querySelector(".passwordDisplay");
 
 // length = Number(lengthInput.value);

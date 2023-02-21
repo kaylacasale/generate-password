@@ -162,3 +162,17 @@ form {
     margin: 2px;
     padding: 5px;
 }
+
+.passwordString {
+    text-align: center;
+}
+
+/* .passwordString {
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: absolute;
+    align-content: center;
+} */

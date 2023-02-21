@@ -13,41 +13,59 @@
 
     <header>
         <h1>pA$sWoRd gEuerA+oR</h1>
-        <p class="displayPassword">🔗</p>
-        <div class="password" id="addPassword">?</div>
-        <button class="btn addedCharacters">...🔓</button>
-        <article class>
-            <label for="length">Enter desired password length!</label>
+        <div style="align-items: center; height: fit-content;">
+            <p id="labelDivPEl"></p>
+            <button onclick="copyPassword()" class="btn" id="copyPass">
+                <!-- <p class="displayPassword">🔗 </p> -->
+            </button>
+            <p class="displayPassword" id="getPass">🔗 </p>
+        </div>
+        <div class="password" id="addPassword">?
+            <!-- <p class="displayPasswordInner"
+                style="margin-top: 50px; background: linear-gradient(#dedee2, #af1e26); font-size: 38px;">🔒
+            </p> -->
+        </div>
+        <div class="passwordLabel" style="height:fit-content; text-align: center;"></div>
+        <div>
+            <p class="displayPasswordInner"
+                style="background: linear-gradient(#dedee2, #af1e26); font-size: 30px; text-align: center;">
+                🔒
+            </p>
+        </div>
+        <button class="btn addedCharacters">...🔓<span style="font-size: 14px;">Press to Generate
+                Password</span></button>
+        <article style="margin: 20px;">
+            <label style="margin: 10px;" for="length">Enter desired password length!</label>
             <input type="number" class="lengthInput" />
             <button class="btn length" id="lengthBtn">Enter</button>
         </article>
     </header>
     <form>
-        <div class="upperGroup">
+        <div class="upperGroup" style="margin: 10px;">
             <label for="upper">Upper Case Letters?</label>
             <!-- <input type="checkbox" id="upperCheckBox"> -->
-            <button class="btn upperBtn" id="btnUpper">Generate Random</button>
+            <button class="btn upperBtn" id="btnUpper">ADD Random</button>
             <p class="displayRandomUpper" id="randomUpper">☈</p>
             <button class="btn addUpper">...</button>
         </div>
         <div class="lowerGroup">
             <label for="lower">Lower Case Letters?</label>
             <!-- <input type="checkbox" id="lowerCheckBox"> -->
-            <button class="btn lowerBtn" id="btnLower">Generate Random</button>
+            <button class="btn lowerBtn" id="btnLower">ADD Random</button>
             <p class="displayRandomLower" id="randomLower">☈</p>
             <button class="btn addLower">...</button>
         </div>
         <div class="specialGroup">
             <label for="special">Special Characters?</label>
             <!-- <input type="checkbox" id="specialCheckBox"> -->
-            <button class="btn specialBtn" id="btnSpecial">Generate Random</button>
+            <button class="btn specialBtn" id="btnSpecial">ADD Random</button>
             <p class="displayRandomSpecial" id="randomSpecial">☈</p>
             <button class="btn addSpecial">...</button>
         </div>
         <div class="numberGroup">
             <label for="number">Numbers?</label>
             <!-- <input type="checkbox" id="numberCheckBox"> -->
-            <button class="btn numberBtn" id="btnNumber">Generate Random</button>
+            <button class="btn numberBtn" id="btnNumber">ADD Random</button>
             <p class="displayRandomNumbers" id="randomNumber">☈</p>
             <button class="btn addNumber">...</button>
         </div>
