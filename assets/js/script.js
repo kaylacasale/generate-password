@@ -40,6 +40,7 @@ var randomUpperBtn = document.querySelector(".upperBtn");
 var addUpper = document.querySelector(".addUpper");
 var random = []
 var randomUppers = []
+// var upperGroupDiv = document.querySelector('.uppperGroup')
 
 randomUpperBtn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -60,6 +61,7 @@ randomUpperBtn.addEventListener('click', function (e) {
             random.push(letter);
         }
         console.log(random);
+        randomUpperBtn.setAttribute("style", "display: none")
     }
 
 });
@@ -92,6 +94,7 @@ randomLowerBtn.addEventListener('click', function (e) {
             random.push(letter);
         }
         console.log(random)
+        randomLowerBtn.setAttribute("style", "display: none")
     }
 });
 
@@ -125,6 +128,7 @@ randomSpecialBtn.addEventListener('click', function (e) {
             random.push(letter);
         }
         console.log(random)
+        randomSpecialBtn.setAttribute("style", "display: none")
     }
 });
 
@@ -157,6 +161,8 @@ randomNumbersBtn.addEventListener('click', function (e) {
             random.push(letter);
         }
         console.log(random);
+        randomNumbersBtn.setAttribute("style", "display: none")
+
     }
 });
 
@@ -164,6 +170,7 @@ randomNumbersBtn.addEventListener('click', function (e) {
 
 var addBtnUpper = document.querySelector(".addUpper")
 var divPassword = document.getElementById('addPassword');
+// addedCharactersBtn.setAttribute = ("style", "display: none")
 // var uppers = document.querySelector('.uppersAdded')
 
 addBtnUpper.addEventListener('click', function (e) {
@@ -172,6 +179,7 @@ addBtnUpper.addEventListener('click', function (e) {
     var DivTagPassword = document.createElement("p")
     DivTagPassword.textContent = "\n" + randomUppers;
     divPassword.appendChild(DivTagPassword);
+    addedCharactersBtn.setAttribute = ("style", "display: block")
     // uppers.textContent = randomUppers;
 });
 
@@ -218,12 +226,14 @@ addBtnNumber.addEventListener('click', function (e) {
 // var addAllCharacters = randomUppers.concat[randomLowers, randomSpecials, randomNumbers];
 var addedCharactersBtn = document.querySelector(".addedCharacters");
 
+
 // console.log(addAllCharacters);
 var passwordChars = [];
 
 var pElDisplay = document.querySelector(".displayPassword");
 var displayPasswordString = document.querySelector(".displayPasswordInner")
 const passwordLabelDiv = document.querySelector('.passwordLabel')
+const span = document.getElementById('copySpan')
 
 
 // copyBtn.addEventListener('click', function copyPassword(passwordString) {
@@ -231,6 +241,8 @@ const passwordLabelDiv = document.querySelector('.passwordLabel')
 //     alert("Copied the generated password to your clipboard: " + passwordString.value);
 
 // })
+const buttonlabel = document.getElementById('copyPass')
+const labelDiv = document.getElementById('labelDivPEl')
 
 addedCharactersBtn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -249,6 +261,9 @@ addedCharactersBtn.addEventListener('click', function (e) {
     }
     // copyPassword(pElDisplay)
     console.log(passwordString);
+    labelDiv.textContent = "Copy To Clipboard: "
+    buttonlabel.textContent = "COPY"
+    span.textContent = "Password Generated!"
     // document.querySelector('.displayPassword').id = "getPass";
 
 
@@ -279,17 +294,17 @@ addedCharactersBtn.addEventListener('click', function (e) {
 // })
 // pElDisplay.addEventListener('onclick', copyPassword())
 
-const labelDiv = document.getElementById('labelDivPEl')
+// const labelDiv = document.getElementById('labelDivPEl')
 const passGot = document.getElementById('getPass')
 const copyBtn = document.querySelector('.copyButton')
-const buttonlabel = document.getElementById('copyPass')
+// const buttonlabel = document.getElementById('copyPass')
 
 function copyPassword() {
-    buttonlabel.textContent = "COPY"
+    // buttonlabel.textContent = "COPY"
     console.log(passGot)
 
     const pass = passGot.innerHTML
-    labelDiv.textContent = "Copy To Clipboard: "
+    // labelDiv.textContent = "Copy To Clipboard: "
     // const copyLabel = document.createElement("p");
     // copyLabel.appendChild(labelDiv)
 
